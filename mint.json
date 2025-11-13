@@ -1,0 +1,45 @@
+{
+  "name": "Serenity Docs",
+  "logo": {
+    "dark": "/logo/icon.png",
+    "light": "/logo/icon.png"
+  },
+  "favicon": "/logo/icon.png",
+  "colors": {
+    "primary": "#0EA5E9",
+    "light": "#38BDF8",
+    "dark": "#0284C7",
+    "background": {
+      "light": "#ffffff",
+      "dark": "#0a0a0a"
+    }
+  },
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["index", "about"]
+    },
+       {
+      "group": "Guides",
+      "pages": ["installing-Serenity", "DNS"]
+    }
+  ],
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "https://serenityios.com/discord"
+    }
+  ],
+  "footer": {
+    "socials": {
+      "github": "https://github.com/serenityios",
+      "discord": "https://serenityios.com/discord",
+      "website": "https://serenityios.com"
+    }
+  },
+  "scripts": [
+    {
+      "path": "/snippets/theme-handler.mdx"
+    }
+  ]
+}

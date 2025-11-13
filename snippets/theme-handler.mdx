@@ -1,0 +1,25 @@
+<script>
+  (function() {
+    // Function to apply theme
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.classList.remove('light', 'dark');
+      document.documentElement.classList.add(theme);
+    }
+
+    // Detect system preference
+    function getSystemTheme() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    // Apply system theme on load
+    const systemTheme = getSystemTheme();
+    applyTheme(systemTheme);
+
+    // Listen for system theme changes and auto-update
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      const newTheme = e.matches ? 'dark' : 'light';
+      applyTheme(newTheme);
+    });
+  })();
+</script>
